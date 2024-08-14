@@ -1,0 +1,384 @@
+
+button{
+  cursor: pointer;
+}
+/* header */
+.headerContainer{
+  background-color: #fff;
+  box-shadow: 1px 1px 10px gainsboro;
+}
+.logoTitle{
+  color: #173E5F;
+}
+.createButton{
+  background-color:#5bb697;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* header-end */
+.homePage{
+  background-color:  #F1FCFE;
+}
+.cardTitle{
+  color: #173E5F;
+}
+.buttonContainer {
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1; /* Ensure buttons are above the overlay */
+}
+.iconImg{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.cardContainer{
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px grey; 
+  position: relative;
+  overflow: hidden;
+}
+.cardContainer:hover .buttonContainer{
+  display: inline-block;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  cursor: pointer;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 0;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+.cardContainer:hover .buttonContainer {
+  display: inline-block;
+  opacity: 1;
+}
+
+.cardContainer:hover .overlay {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+.cardContainer:hover .overlay{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000004D;
+  z-index: 0;
+  border-radius: 10px;
+}
+.magazines {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.createdAt{
+  font-weight: 600;
+  font-size: 18px;
+  color: #173E5F;
+}
+.createdDate{
+  font-weight: 400;
+  font-size: 16px;
+  color: #173E5F;
+}
+.first-box {
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid rgb(203 213 225);
+  margin-left: 30px;
+  padding-left: 20px;
+}
+.editorContainer{
+  background-color: #F1FCFE;
+}
+.editorTitle{
+  color: #173E5F;
+}
+
+.margin {
+  margin-top: 30px;
+}
+
+
+.events {
+  max-height: 90vh;
+  overflow: auto;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.event-card {
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ql-container {
+  min-height: 10rem;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-editor {
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.description {
+  font-size: 14px;
+}
+
+
+.tags-input {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 48px;
+  padding: 0 8px;
+  border: 1px solid rgb(214, 216, 218);
+  border-radius: 6px;
+}
+
+.tags-input:focus-within {
+  border: 1px solid #0052cc;
+}
+
+input {
+  flex: 1;
+  border: none;
+  height: 46px;
+  font-size: 14px;
+  padding: 4px 0 0 0;
+}
+
+input:focus {
+  outline: transparent;
+}
+
+#tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.tag {
+  width: auto;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 8px;
+  font-size: 14px;
+  list-style: none;
+  border-radius: 6px;
+  margin: 0 8px 8px 0;
+  background: #0052cc;
+
+}
+
+@media screen and (max-width: 567px) {
+  .tags-input {
+    width: calc(100vw - 32px);
+  }
+}
+
+.tag-close-icon {
+  padding-left: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.default-border {
+  border: 1px solid #e5e5e5;
+}
+
+.container {
+  text-align: left;
+}
+
+.html-text {
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  height: 400px;
+}
+
+#editor-2 iframe:nth-child(1) {
+  display: none;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+.upload {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload form {
+  text-align: center;
+}
+
+.upload input {
+  height: auto;
+}
+
+.upload p {
+  color: green;
+}
+
+.viewer {
+  background-color: #e4e4e4;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.image-gallery {
+  -webkit-column-count: 4 !important;
+  -moz-column-count: 4 !important;
+  column-count: 4 !important;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  text-align: center;
+  padding: 0 12px;
+  gap: 5px;
+  margin-bottom: 2rem;
+}
+
+.image {
+  text-align: center;
+  padding: 6px;
+  border: 1px solid #ebebeb;
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all .25s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  padding: 3px;
+  border: 1px solid #8f8f8f;
+}
+
+.image:active {
+  transform: scale(1);
+  padding: 6px;
+}
+
+.Toastify__progress-bar-theme--light {
+  background: green !important;
+}
+
+iframe .blockbuilder-option-buttons {
+  display: none !important;
+}
+
+/* footer */
+
+.footer {
+  background-color: #0f172a;
+}
+
+.footer p {
+  color: #ffffff;
+  max-width: 400px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.footer a {
+  color: #f2f2f2;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.footer h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.footer img {
+  mix-blend-mode: screen;
+}
+.listStyle {
+  text-decoration: none;
+}
+.listStyle:hover {
+  text-decoration: none;
+}
+
+.footerList ul {
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.footerRightContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .footerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  .footerRightContainer {
+    justify-content: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerRightContainer {
+    justify-content: left;
+  }
+}
